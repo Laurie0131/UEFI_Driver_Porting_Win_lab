@@ -81,22 +81,22 @@ You will include the driver in the Nt32 project. <br>Build the UEFI Driver from 
 ---
 @title[Compile a UEFI Driver?]
 <p align="right"><span class="gold" ><b>Compile a UEFI Driver</b></span></p>
-
+<br>
 <table id="recTable">
 	<tr>
-       <td colspan="2" bgcolor="#300a24" height=".025" align="center"><p style="line-height:010%"><span style="font-size:0.65em" ><b>Two Ways to Compile a Driver</b></span></p></td>
+       <td colspan="2" bgcolor="ubuntu" height=".025" align="center"><p style="line-height:010%"><span style="font-size:0.65em" ><b>Two Ways to Compile a Driver</b></span></p></td>
 	</tr>
 	<tr>
-		<td  bgcolor="#300a24" height=".02"><p style="line-height:010%"><span style="font-size:0.45em" ><i>Standalone</i></span></p></td>
-		<td  bgcolor="#300a24" height=".02"><p style="line-height:010%"><span style="font-size:0.45em" ><i>In a Project</i></span></p></td>
+		<td  bgcolor="#300a24" height=".02" align="center"><p style="line-height:010%"><span style="font-size:0.5em" ><i>Standalone</i></span></p></td>
+		<td  bgcolor="#300a24" height=".02" align="center"><p style="line-height:010%"><span style="font-size:0.5em" ><i>In a Project</i></span></p></td>
 	</tr>
 	<tr>
-		<td  bgcolor="#300a24" height=".02"><p style="line-height:010%"><span style="font-size:0.45em" >The build command directly compiles the .INF file </span></p></td>
-		<td  bgcolor="#300a24" height=".02"><p style="line-height:010%"><span style="font-size:0.45em" >Include the .INF file in the project’s .DSC file</span></p></td>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:040%"><span style="font-size:0.5em" >The build command directly compiles the .INF file </span></p></td>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:040%"><span style="font-size:0.5em" >Include the .INF file in the project’s .DSC file</span></p></td>
 	</tr>
 	<tr>
-		<td  bgcolor="#300a24" height=".02"><p style="line-height:010%"><span style="font-size:0.45em" >Results:  The driver’s  .EFI file is located in the Build directory</span></p></td>
-		<td  bgcolor="#300a24" height=".02"><p style="line-height:010%"><span style="font-size:0.45em" >Results:  The driver’s .EFI file is a part of the project in the Build directory</span></p></td>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:040%"><span style="font-size:0.5em" >Results:  The driver’s  .EFI file is located in the Build directory</span></p></td>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:040%"><span style="font-size:0.5em" >Results:  The driver’s .EFI file is a part of the project in the Build directory</span></p></td>
 	</tr>
 </table>
 
