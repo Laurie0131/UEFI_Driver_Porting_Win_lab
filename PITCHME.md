@@ -91,12 +91,12 @@ You will include the driver in the Nt32 project. <br>Build the UEFI Driver from 
 		<td  bgcolor="#300a24" height=".02" align="center"><p style="line-height:010%"><span style="font-size:0.75em" ><i>In a Project</i></span></p></td>
 	</tr>
 	<tr>
-		<td  bgcolor="#300a24" height=".02"><p style="line-height:040%"><span style="font-size:0.65em" >The build command directly compiles the .INF file </span></p></td>
-		<td  bgcolor="#300a24" height=".02"><p style="line-height:040%"><span style="font-size:0.65em" >Include the .INF file in the project’s .DSC file</span></p></td>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:060%"><span style="font-size:0.65em" >The build command directly compiles the .INF file </span></p></td>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:060%"><span style="font-size:0.65em" >Include the .INF file in the project’s .DSC file</span></p></td>
 	</tr>
 	<tr>
-		<td  bgcolor="#300a24" height=".02"><p style="line-height:040%"><span style="font-size:0.65em" >Results:  The driver’s  .EFI file is located in the Build directory</span></p></td>
-		<td  bgcolor="#300a24" height=".02"><p style="line-height:040%"><span style="font-size:0.65em" >Results:  The driver’s .EFI file is a part of the project in the Build directory</span></p></td>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:060%"><span style="font-size:0.65em" >Results:  The driver’s  .EFI file is located in the Build directory</span></p></td>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:060%"><span style="font-size:0.65em" >Results:  The driver’s .EFI file is a part of the project in the Build directory</span></p></td>
 	</tr>
 </table>
 
