@@ -84,7 +84,7 @@ You will include the driver in the Nt32 project. <br>Build the UEFI Driver from 
 <br>
 <table id="recTable">
 	<tr>
-       <td colspan="2" bgcolor="ubuntu" height=".025" align="center"><p style="line-height:010%"><span style="font-size:0.65em" ><b>Two Ways to Compile a Driver</b></span></p></td>
+       <td colspan="2" bgcolor="#64205d" height=".025" align="center"><p style="line-height:010%"><span style="font-size:0.65em" ><b>Two Ways to Compile a Driver</b></span></p></td>
 	</tr>
 	<tr>
 		<td  bgcolor="#300a24" height=".02" align="center"><p style="line-height:010%"><span style="font-size:0.5em" ><i>Standalone</i></span></p></td>
