@@ -1,13 +1,17 @@
 ---?image=assets/images/gitpitch-audience.jpg
 @title[UEFI_Driver_Porting Lab]
-<br><br><br><br><br>
+<br><br><br>
+<span style="font-size:0.75em" >This slide deck has moved to:  
+https://gitpitch.com/tianocore-training/UEFI_Driver_Porting_Win_Lab/master#/
+</span>
+<br><br>
 ## <span class="gold"   >UEFI & EDK II Training</span>
 
 #### How to Write a UEFI Driver Lab - Windows
 
 <br>
 <span style="font-size:0.75em" ><a href='http://www.tianocore.org'>tianocore.org</a></span><br>
-<span style="font-size:0.5em" >See also <a href="https://github.com/Laurie0131/UEFI_Driver_Porting_Win_lab/blob/master/LabGuide.md">LabGuide.md</a> for Copy&Paste examples in labs</span>
+<span style="font-size:0.5em" >See also <a href="https://github.com/tianocore-training/UEFI_Driver_Porting_Win_lab/blob/master/LabGuide.md">LabGuide.md</a> for Copy&Paste examples in labs</span>
 Note:
   PITCHME.md for UEFI / EDK II Training  UEFI Driver Porting Lab - Windows
 
@@ -73,6 +77,37 @@ You will include the driver in the Nt32 project. <br>Build the UEFI Driver from 
 <span style="font-size:0.8em" >&nbsp;  </span>
 </div>
 
+
+---
+@title[Compile a UEFI Driver?]
+<p align="right"><span class="gold" ><b>Compile a UEFI Driver</b></span></p>
+
+<table id="recTable">
+	<tr>
+       <td colspan="2" bgcolor="#300a24" height=".025" align="center"><p style="line-height:010%"><span style="font-size:0.65em" ><b>Two Ways to Compile a Driver</b></span></p></td>
+	</tr>
+	<tr>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:010%"><span style="font-size:0.45em" ><i>Standalone</i></span></p></td>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:010%"><span style="font-size:0.45em" ><i>In a Project</i></span></p></td>
+	</tr>
+	<tr>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:010%"><span style="font-size:0.45em" >The build command directly compiles the .INF file </span></p></td>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:010%"><span style="font-size:0.45em" >Include the .INF file in the project’s .DSC file</span></p></td>
+	</tr>
+	<tr>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:010%"><span style="font-size:0.45em" >Results:  The driver’s  .EFI file is located in the Build directory</span></p></td>
+		<td  bgcolor="#300a24" height=".02"><p style="line-height:010%"><span style="font-size:0.45em" >Results:  The driver’s .EFI file is a part of the project in the Build directory</span></p></td>
+	</tr>
+</table>
+
+
+Note:
+|Standalone |In a Project	|
+|-----------|--------------|
+|The build command directly compiles the .INF file |Include the .INF file in the project’s .DSC file	|
+|Results:  The driver’s  .EFI file is located in the Build directory|	Results:  The driver’s .EFI file is a part of the project in the Build directory|
+
+
 ---?image=/assets/images/slides/Slide5.JPG
 @title[Compile a UEFI Driver?]
 <p align="right"><span class="gold" >Compile a UEFI Driver</span></p>
@@ -88,7 +123,7 @@ Note:
 <p align="right"><span class="gold" >Lab 2: Build the UEFI Driver</span></p>
 <br>
 <ul>
-   <li><span style="font-size:0.8em" >Perform <a href="https://gitpitch.com/Laurie0131/Platform_Build_Win_Lab/master#/9">Lab Setup</a> from previous Nt32Pkg Labs  </span></li>
+   <li><span style="font-size:0.8em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_Win_Lab/master#/2">Lab Setup</a> from previous Nt32Pkg Labs  </span></li>
    <li><span style="font-size:0.8em" >Open `C:/FW/edk2/Nt32Pkg/Nt32Pkg.dsc`</span></li>
    <li><span style="font-size:0.8em" >Add the following to the `[Components]` section: </span><br><span style="font-size:0.6em" >*Hint:*add to the last module in the `[Components]` section   </span></li>
 <pre lang="php">
