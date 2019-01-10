@@ -1124,12 +1124,11 @@ Same as slide
      
 ---
 @title[Additional Porting]
-<p align="right"><span class="gold" >Additional Porting</span></p>  
+<p align="right"><span class="gold" ><b>Additional Porting</b></span></p>  
 
 
 
-@snap[north-west span-95 ]
-<br>
+@snap[north-west span-95 fragment]
 <br>
 <p style="line-height:50%" ><br><br>&nbsp;</p>
 @box[bg-navy text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" >Adding strings and forms to setup -&lpar;HII&rpar;<br>&nbsp;</span></p>)
@@ -1137,8 +1136,7 @@ Same as slide
 @snapend
 
 
-@snap[north-west span-80 ]
-<br>
+@snap[north-west span-80 fragment]
 <br>
 <br>
 <br>
@@ -1150,8 +1148,7 @@ Same as slide
 
 
 
-@snap[north-west span-70 ]
-<br>
+@snap[north-west span-70 fragment]
 <br>
 <br>
 <br>
@@ -1169,6 +1166,7 @@ Same as slide
 
 @snap[south-west span-90]
 <span style="font-size:0.7em" >Refer to the UEFI Drivers Writer’s Guide for more tips – <a href="https://legacy.gitbook.com/book/edk2-docs/edk-ii-uefi-driver-writer-s-guide/details">Pdf link</a></span>
+<br>
 @snapend
 
 Note:
