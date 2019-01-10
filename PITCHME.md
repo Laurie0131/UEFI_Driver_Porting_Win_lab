@@ -1128,8 +1128,7 @@ Same as slide
 
 
 
-@snap[north-west span-85 fragment]
-<br>
+@snap[north-west span-95 ]
 <br>
 <br>
 <p style="line-height:50%" ><br><br>&nbsp;</p>
@@ -1138,8 +1137,7 @@ Same as slide
 @snapend
 
 
-@snap[north-west span-80 fragment]
-<br>
+@snap[north-west span-80 ]
 <br>
 <br>
 <br>
@@ -1152,8 +1150,7 @@ Same as slide
 
 
 
-@snap[north-west span-75 fragment]
-<br>
+@snap[north-west span-70 ]
 <br>
 <br>
 <br>
@@ -1170,7 +1167,7 @@ Same as slide
 
 
 
-@snap[north-west span-70]
+@snap[south-west span-90]
 <span style="font-size:0.7em" >Refer to the UEFI Drivers Writer’s Guide for more tips – <a href="https://legacy.gitbook.com/book/edk2-docs/edk-ii-uefi-driver-writer-s-guide/details">Pdf link</a></span>
 @snapend
 
