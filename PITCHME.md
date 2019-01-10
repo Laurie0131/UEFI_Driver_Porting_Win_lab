@@ -290,12 +290,101 @@ Lab 3 finished
 
 
 
----?image=/assets/images/slides/Slide15.JPG
+---?image=/assets/images/slides/Slide15_1.JPG
 @title[Lab 4: Port Supported-Start]
 <p align="center"><span class="gold" >Lab 4: Porting Supported and Start</span></p>
 <span style="font-size:01.1em" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Review the Driver Binding Protocol</b></span>
 
+
+
+@snap[north-west span-20 ]
+<br>
+<br>
+<p style="line-height:40%" align="left"><span style="font-size:02.250em;" >@fa[star  gp-bullet-cyan] </span></p>
+@snapend
+
+@snap[north-east span-85 ]
+<br>
+<br>
+<p style="line-height:85%" align="left"><span style="font-size:01.25em; font-family:Consolas;" >@color[yellow](Supported&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
+Determines if a driver supports a controller </span></p>
+@snapend
+
+
+
+@snap[north-west span-20 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:40%" align="left"><span style="font-size:02.250em;" >@fa[star  gp-bullet-ltgreen] </span></p>
+@snapend
+
+@snap[north-east span-85 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:85%" align="left"><span style="font-size:01.25em; font-family:Consolas;" >@color[yellow](Start&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
+Starts a driver on a controller &amp; Installs Protocols </span></p>
+@snapend
+
+
+
+@snap[north-west span-20 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:40%" align="left"><span style="font-size:02.250em;" >@fa[star  gp-bullet-gold] </span></p>
+@snapend
+
+@snap[north-east span-85 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:85%" align="left"><span style="font-size:01.25em; font-family:Consolas;" >@color[yellow](Stop&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
+Stops a driver from managing a controller </span></p>
+@snapend
+
 Note:
+
+- Supported ()
+- Start()
+- Stop()
+
+Supported() - Checks if a driver supports a controller Check should not change hardware state of controller 
+Minimize execution time, move complex I/O to Start() May be called for controller that is already managed Child is optionally specified
+
+Start() - Starts a driver on a controller
+Can create ALL child handles or ONE child handle
+A driver is not required to support starting ONE child handle.  It may always create ALL child handles.
+
+Stop() - Stops a driver from managing a controller
+Destroys all specified child handles 
+If no children are specified, controller is stopped immediately
+Stopping a bus controller requires two calls
+
+
+
+### tasks
 
 - Port Supported() to check for a specific protocol before returning ‘Success’
 - Port Start() to allocate a memory buffer and fill it with a specific value
