@@ -300,13 +300,15 @@ Lab 3 finished
 @snap[north-west span-20 ]
 <br>
 <br>
-<p style="line-height:40%" align="left"><span style="font-size:02.250em;" >@fa[star  gp-bullet-cyan] </span></p>
+<br>
+<br><p style="line-height:40%" align="left"><span style="font-size:02.250em;" >@fa[star  gp-bullet-cyan] </span></p>
 @snapend
 
 @snap[north-east span-85 ]
 <br>
 <br>
-<p style="line-height:85%" align="left"><span style="font-size:01.25em; font-family:Consolas;" >@color[yellow](Supported&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
+<br>
+<br><p style="line-height:85%" align="left"><span style="font-size:01.25em; font-family:Consolas;" >@color[yellow](Supported&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
 Determines if a driver supports a controller </span></p>
 @snapend
 
@@ -319,7 +321,8 @@ Determines if a driver supports a controller </span></p>
 <br>
 <br>
 <br>
-<p style="line-height:40%" align="left"><span style="font-size:02.250em;" >@fa[star  gp-bullet-ltgreen] </span></p>
+<br>
+<br><p style="line-height:40%" align="left"><span style="font-size:02.250em;" >@fa[star  gp-bullet-ltgreen] </span></p>
 @snapend
 
 @snap[north-east span-85 ]
@@ -329,7 +332,8 @@ Determines if a driver supports a controller </span></p>
 <br>
 <br>
 <br>
-<p style="line-height:85%" align="left"><span style="font-size:01.25em; font-family:Consolas;" >@color[yellow](Start&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
+<br>
+<br><p style="line-height:85%" align="left"><span style="font-size:01.25em; font-family:Consolas;" >@color[yellow](Start&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
 Starts a driver on a controller &amp; Installs Protocols </span></p>
 @snapend
 
@@ -346,7 +350,8 @@ Starts a driver on a controller &amp; Installs Protocols </span></p>
 <br>
 <br>
 <br>
-<p style="line-height:40%" align="left"><span style="font-size:02.250em;" >@fa[star  gp-bullet-gold] </span></p>
+<br>
+<br><p style="line-height:40%" align="left"><span style="font-size:02.250em;" >@fa[star  gp-bullet-gold] </span></p>
 @snapend
 
 @snap[north-east span-85 ]
@@ -360,7 +365,8 @@ Starts a driver on a controller &amp; Installs Protocols </span></p>
 <br>
 <br>
 <br>
-<p style="line-height:85%" align="left"><span style="font-size:01.25em; font-family:Consolas;" >@color[yellow](Stop&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
+<br>
+<br><p style="line-height:85%" align="left"><span style="font-size:01.25em; font-family:Consolas;" >@color[yellow](Stop&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
 Stops a driver from managing a controller </span></p>
 @snapend
 
