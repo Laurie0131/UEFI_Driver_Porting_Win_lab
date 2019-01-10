@@ -1122,20 +1122,57 @@ Note:
 
 Same as slide
      
----?image=/assets/images/slides/Slide45.JPG
+---
 @title[Additional Porting]
 <p align="right"><span class="gold" >Additional Porting</span></p>  
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 
-<span style="font-size:0.8em" >Refer to the UEFI Drivers Writer’s Guide for more tips – <a href="https://legacy.gitbook.com/book/edk2-docs/edk-ii-uefi-driver-writer-s-guide/details">Pdf link</a></span>
+
+@snap[north-west span-85 fragment]
+<br>
+<br>
+<br>
+<p style="line-height:50%" ><br><br>&nbsp;</p>
+@box[bg-navy text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" >Adding strings and forms to setup -&lpar;HII&rpar;<br>&nbsp;</span></p>)
+<br>
+@snapend
+
+
+@snap[north-west span-80 fragment]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:50%" ><br>&nbsp;<br>&nbsp;</p>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" >Publish &amp; consume protocols<br>&nbsp;</span></p>)
+<br>
+@snapend
+
+
+
+@snap[north-west span-75 fragment]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:50%" ><br>&nbsp;<br>&nbsp;</p>
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:80%" ><span style="font-size:0.9em; font-weight: bold;" >Hardware initialization<br>&nbsp;</span></p>)
+<br>
+@snapend
+
+
+
+
+@snap[north-west span-70]
+<span style="font-size:0.7em" >Refer to the UEFI Drivers Writer’s Guide for more tips – <a href="https://legacy.gitbook.com/book/edk2-docs/edk-ii-uefi-driver-writer-s-guide/details">Pdf link</a></span>
+@snapend
 
 Note:
 Use the UEFI Driver Wizard to create a starting point for new drivers on EDK II
