@@ -58,8 +58,7 @@ Note:
 </ul>
 
 
-<span style="font-size:0.6em" >@color[yellow]( Note: Since this is a lab, to follow examples for copy & paste, 
-use the following Markdown link ) <a href="https://github.com/tianocore-training/UEFI_Driver_Porting_Win_lab/blob/master/LabGuide.md">LabGuide.md</a> </span><br>
+<span style="font-size:0.6em" >@color[yellow]( Note: Since this is a lab, to follow examples for copy & paste, use the following Markdown link ) <a href="https://github.com/tianocore-training/UEFI_Driver_Porting_Win_lab/blob/master/LabGuide.md">LabGuide.md</a> </span><br>
 
 
 ---?image=/assets/images/slides/Slide_LabSec.JPG
@@ -88,11 +87,11 @@ Skip if LAB 1 UEFI Driver Wizard completed successfully
 
 <span style="font-size:0.75em;" >If  UEFI Driver Wizard does not work: </span>
 
-<ol style="line-height::0.7;">
-<li><span style="font-size:0.5em;" > Copy the directory UefiDriverTemplate from        `. . ./FW/LabSampleCode/ to  C:/FW/edk2-ws/edk2`  </span> </li>
-<li><span style="font-size:0.5em;" > Rename Directory UefiDriverTemplate to MyWizardDriver </span> </li>
+<ul style="list-style-type:none; line-height:0.7;">
+<li><span style="font-size:0.5em;" >1. &nbsp; Copy the directory UefiDriverTemplate from        `. . ./FW/LabSampleCode/ to  C:/FW/edk2-ws/edk2`  </span> </li>
+<li><span style="font-size:0.5em;" >2. &nbsp; Rename Directory UefiDriverTemplate to MyWizardDriver </span> </li>
 
-</ol>
+</ul>
 
 
 
@@ -150,17 +149,18 @@ Note:
 @title[Lab2: Build the UEFI Driver?]
 <p align="right"><span class="gold" >Lab 2: Build the UEFI Driver</span></p>
 <br>
-<ul>
-   <li><span style="font-size:0.8em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_Win_Emulator_Lab/master#/9">Lab Setup</a> from previous EmulatorPkg Labs  </span></li>
-   <li><span style="font-size:0.8em" >Open `C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc`</span></li>
-   <li><span style="font-size:0.8em" >Add the following to the `[Components]` section: </span><br><span style="font-size:0.6em" >*Hint:*add to the last module in the `[Components]` section   </span></li>
-<pre lang="php">
+
+<ul style="list-style-type:none; line-height:0.7;">
+   <li><span style="font-size:0.67em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_Win_Emulator_Lab/master#/9">Lab Setup</a> from previous EmulatorPkg Labs  </span></li>
+   <li><span style="font-size:0.67em" >Open `C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc`</span></li>
+   <li><span style="font-size:0.67em" >Add the following to the `[Components]` section: </span><br><span style="font-size:0.5em" >*Hint:*add to the last module in the `[Components]` section   </span></li>
+
 ```
     # Add new modules here
    MyWizardDriver/MyWizardDriver.inf
 ```
-</pre>
-   <li><span style="font-size:0.8em" >Save and close the file `C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc`  </span></li>
+
+   <li><span style="font-size:0.67em" >Save and close the file `C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc`  </span></li>
 </ul>
 
 
