@@ -150,17 +150,17 @@ Note:
 <p align="right"><span class="gold" >Lab 2: Build the UEFI Driver</span></p>
 <br>
 
-<ul style="list-style-type:none; line-height:0.7;">
+<ul style="list-style-type:disc; line-height:0.7;">
    <li><span style="font-size:0.67em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_Win_Emulator_Lab/master#/9">Lab Setup</a> from previous EmulatorPkg Labs  </span></li>
    <li><span style="font-size:0.67em" >Open `C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc`</span></li>
-   <li><span style="font-size:0.67em" >Add the following to the `[Components]` section: </span><br><span style="font-size:0.5em" >*Hint:*add to the last module in the `[Components]` section   </span></li>
+   <li><span style="font-size:0.67em" >Add the following to the `[Components]` section: </span><br><span style="font-size:0.5em" >&nbsp;&nbsp;&nbsp;&nbsp;*Hint:*&nbsp; add to the last module in the `[Components]` section   </span></li>
 
 ```
     # Add new modules here
    MyWizardDriver/MyWizardDriver.inf
 ```
 
-   <li><span style="font-size:0.67em" >Save and close the file `C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc`  </span></li>
+   <li><span style="font-size:0.67em" >Save and close the file <br>&nbsp;&nbsp;&nbsp;&nbsp;`C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc`  </span></li>
 </ul>
 
 
