@@ -10,12 +10,13 @@ https://gitpitch.com/tianocore-training/UEFI_Driver_Porting_Win_Lab/master#/
 #### How to Write a UEFI Driver Lab - Windows
 
 <br>
+<span style="font-size:0.5em" >See also <a href="https://github.com/tianocore-training/UEFI_Driver_Porting_Win_lab/blob/master/LabGuide.md">LabGuide.md</a> for Copy&Paste examples in labs</span><br>
 <span style="font-size:0.75em" ><a href='http://www.tianocore.org'>tianocore.org</a></span><br>
-<span style="font-size:0.5em" >See also <a href="https://github.com/tianocore-training/UEFI_Driver_Porting_Win_lab/blob/master/LabGuide.md">LabGuide.md</a> for Copy&Paste examples in labs</span>
+
 Note:
   PITCHME.md for UEFI / EDK II Training  UEFI Driver Porting Lab - Windows
 
-  Copyright (c) 2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2020, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -52,26 +53,63 @@ Note:
 -->
 <ul style="list-style-type:none">
  <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Compile a UEFI driver template created from<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UEFI Driver Wizard</span> </li><br>
- <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Test driver w/ Nt32 emulation using UEFI Shell 2.0</span></li><br>
+ <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Test driver w/ Windows emulation using UEFI Shell 2.0</span></li><br>
  <li>@fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Port code into the template driver</span> </li>
 </ul>
 
----?image=assets/images/binary-strings-black2.jpg
-@title[UEFI Driver Lab]
-<br><br><br><br><br><br><br>
-### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UEFI Driver Porting Lab </span>
-<span style="font-size:0.9em" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This Lab uses the template UEFI driver created by the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UEFI Driver Wizard</span>
+
+<span style="font-size:0.6em" >@color[yellow]( Note: Since this is a lab, to follow examples for copy & paste, 
+use the following Markdown link ) <a href="https://github.com/tianocore-training/UEFI_Driver_Porting_Win_lab/blob/master/LabGuide.md">LabGuide.md</a> </span><br>
+
+
+---?image=/assets/images/slides/Slide_LabSec.JPG
+@title[Lab1 UEFI Driver Template Lab]
+<br>
+<br>
+<p align="Left"><span class="gold" >Lab 1: UEFI Driver Template</span></p>
+<br>
+<div class="left1">
+<span style="font-size:0.8em" <br>
+Use this lab, if you’re not able to create a UEFI Driver Template using the UEFI Driver Wizard. 
+
+<br>
+Skip if LAB 1 UEFI Driver Wizard completed successfully
+
+</span>
+</div>
+<div class="right1">
+<span style="font-size:0.8em" >&nbsp;  </span>
+</div>
+
+---?image=/assets/images/slides/Slide4.JPG
+@title[Lab 1: Get UEFI Driver Template]
+<p align="right"><span class="gold" >@size[1.1em](<b>Lab 1: Get UEFI Driver Template  </b>)</span>
+<span style="font-size:0.75em;" >  </span></p>
+
+<span style="font-size:0.75em;" >If  UEFI Driver Wizard does not work: </span>
+
+<ol style="line-height::0.7;">
+<li><span style="font-size:0.5em;" > Copy the directory UefiDriverTemplate from        `. . ./FW/LabSampleCode/ to  C:/FW/edk2-ws/edk2`  </span> </li>
+<li><span style="font-size:0.5em;" > Rename Directory UefiDriverTemplate to MyWizardDriver </span> </li>
+
+</ol>
+
+
+
+Note:
+This UEFI Driver example was created from the UEFI Driver Wizard Lab
+Review UEFI Driver Wizard Lab for which protocols are getting produced and which protocols are being consumed.
 
 
 ---?image=/assets/images/slides/Slide_LabSec.JPG
 @title[Lab 2: Building a UEFI Driver]
 <br>
 <br>
-<p align="Left"><span class="gold" >Lab 2: Building a UEFI Driver</span></p>
+<p align="Left"><span class="gold" >@size[1.1em](Lab 2: Building a UEFI Driver)</span></p>
 <br>
 <div class="left1">
 <span style="font-size:0.8em" >In this lab, you’ll build a UEFI Driver created by the UEFI Driver Wizard.<br>
-You will include the driver in the Nt32 project. <br>Build the UEFI Driver from the Driver Wizard </span>
+You will include the driver in the EmulatorPkg project. <br>Build the UEFI Driver from the Driver Wizard </span>
 </div>
 <div class="right1">
 <span style="font-size:0.8em" >&nbsp;  </span>
@@ -80,7 +118,7 @@ You will include the driver in the Nt32 project. <br>Build the UEFI Driver from 
 
 ---
 @title[Compile a UEFI Driver?]
-<p align="right"><span class="gold" ><b>Compile a UEFI Driver</b></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Compile a UEFI Driver</b>)</span></p>
 <br>
 <table id="recTable">
 	<tr>
@@ -113,8 +151,8 @@ Note:
 <p align="right"><span class="gold" >Lab 2: Build the UEFI Driver</span></p>
 <br>
 <ul>
-   <li><span style="font-size:0.8em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_Win_Lab/master#/2">Lab Setup</a> from previous Nt32Pkg Labs  </span></li>
-   <li><span style="font-size:0.8em" >Open `C:/FW/edk2/Nt32Pkg/Nt32Pkg.dsc`</span></li>
+   <li><span style="font-size:0.8em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_Win_Emulator_Lab/master#/9">Lab Setup</a> from previous EmulatorPkg Labs  </span></li>
+   <li><span style="font-size:0.8em" >Open `C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc`</span></li>
    <li><span style="font-size:0.8em" >Add the following to the `[Components]` section: </span><br><span style="font-size:0.6em" >*Hint:*add to the last module in the `[Components]` section   </span></li>
 <pre lang="php">
 ```
@@ -122,7 +160,7 @@ Note:
    MyWizardDriver/MyWizardDriver.inf
 ```
 </pre>
-   <li><span style="font-size:0.8em" >Save and close the file `C:/FW/edk2/Nt32Pkg/Nt32Pkg.dsc`  </span></li>
+   <li><span style="font-size:0.8em" >Save and close the file `C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc`  </span></li>
 </ul>
 
 
@@ -1224,7 +1262,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWIS
 ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY 
 OF SUCH DAMAGE.
 
-Copyright (c) 2018, Intel Corporation. All rights reserved.
+Copyright (c) 2020, Intel Corporation. All rights reserved.
 **/
 
 ```
