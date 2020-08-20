@@ -87,8 +87,8 @@ Skip if LAB 1 UEFI Driver Wizard completed successfully
 
 <span style="font-size:0.75em;" >If  UEFI Driver Wizard does not work: </span>
 
-<ul style="list-style-type:none; line-height:0.7;">
-<li><span style="font-size:0.55em;" >1. &nbsp; Copy the directory UefiDriverTemplate from <br>&nbsp;&nbsp;&nbsp;&nbsp;       `. . ./FW/LabSampleCode/ to  C:/FW/edk2-ws/edk2`  </span> </li>
+<ul style="list-style-type:none; line-height:0.75;">
+<li><span style="font-size:0.55em;" >1. &nbsp; Copy the directory "`UefiDriverTemplate`" from <br>&nbsp;&nbsp;&nbsp;&nbsp;       `. . ./FW/LabSampleCode/ to  C:/FW/edk2-ws/edk2`  </span> </li>
 <li><span style="font-size:0.55em;" >2. &nbsp; Rename Directory UefiDriverTemplate to MyWizardDriver </span> </li>
 
 </ul>
@@ -150,7 +150,7 @@ Note:
 <p align="right"><span class="gold" >Lab 2: Build the UEFI Driver</span></p>
 <br>
 
-<ul style="list-style-type:disc; line-height:0.7;">
+<ul style="list-style-type:disc; line-height:0.75;">
    <li><span style="font-size:0.67em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_Win_Emulator_Lab/master#/9">Lab Setup</a> from previous EmulatorPkg Labs  </span></li>
    <li><span style="font-size:0.67em" >Open `C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc`</span></li>
    <li><span style="font-size:0.67em" >Add the following to the `[Components]` section: </span><br><span style="font-size:0.5em" >&nbsp;&nbsp;&nbsp;&nbsp;*Hint:*&nbsp; add to the last module in the `[Components]` section   </span></li>
@@ -185,7 +185,7 @@ Note:
 Load the UEFI Driver from the shell
 <br>&nbsp;&nbsp;&nbsp; At the Shell prompt, type &nbsp;<span style="background-color: #101010"><font color="yellow">`Shell> `</font>`fs0:`</span>
 <br>&nbsp;&nbsp;&nbsp; Type:&nbsp; <span style="background-color: #101010"><font color="yellow">`FS0:\> `&nbsp;</font>`load MyWizardDriver.efi`</span></span></p>
-<p style="line-height:80%"><span style="font-size:0.5em" ><b>Build ERRORS:</b> Copy the solution files from `~/FW/LabSampleCode/LabSolutions/LessonC.1` to `C:/FW/edk2-ws/edk2/MyWizardDriver`	</span></p>
+<p style="line-height:60%"><span style="font-size:0.5em" ><b>Build ERRORS:</b> Copy the solution files from `~/FW/LabSampleCode/LabSolutions/LessonC.1` to `C:/FW/edk2-ws/edk2/MyWizardDriver`	</span></p>
 
 
 Note: 
@@ -212,7 +212,7 @@ Same as slide
 @title[Lab 2 Test Driver -Dh]
 <p align="right"><span class="gold" >Lab 2: Test Driver</span></p>
 <br>
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em" >At the shell prompt using the handle from the `drivers` command, Type:&nbsp; <span style="background-color: #101010">` dh -d a9 `</span></span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.7em" >At the shell prompt using the handle from the `drivers` command,<br> Type:&nbsp; <span style="background-color: #101010">` dh -d a9 `</span></span></p>
 
 <div class="left">
 <br>
@@ -235,7 +235,7 @@ Same as slide
 @title[Lab 2 Test Driver -unload]
 <p align="right"><span class="gold" >Lab 2: Test Driver</span></p>
 <br>
-<span style="font-size:0.8em" >At the shell prompt using the handle from the `drivers` command, Type:&nbsp; <span style="background-color: #101010">`unload a9`</span></span>
+<p style="line-height:80%" align="left" ><span style="font-size:0.8em" >At the shell prompt using the handle from the `drivers` command, Type:&nbsp; <span style="background-color: #101010">`unload a9`</span></span></p>
 
 <div class="left1">
 <span style="font-size:0.7em" >See example screenshot - right</span><br>
@@ -299,12 +299,12 @@ END of Lab 2
 ```
 
 <p style="line-height:80%"><span style="font-size:0.7em" >Load the UEFI Driver from the shell
-<br>&nbsp;&nbsp;&nbsp; At the Shell prompt, type &nbsp;<span style="background-color: #101010"><font color="yellow">` Shell> `</font>` fs0: `</span>
+<br>&nbsp;&nbsp;&nbsp; At the Shell prompt, type &nbsp;<span style="background-color: #101010"><font color="yellow">` Shell> `</font>&nbsp;` fs0: `</span>
 <br>&nbsp;&nbsp;&nbsp; Type:&nbsp; <span style="background-color: #101010"><font color="yellow">` FS0:\> `&nbsp;</font>`load MyWizardDriver.efi `</span></span></p>
 
 <div class="left">
 <span style="font-size:0.7em" >Type:&nbsp; <span style="background-color: #101010">`drivers`</span></span><br>
-<span style="font-size:0.7em" >Observe the change in the string that the driver returned </span><br>
+<p style="line-height:80%"><span style="font-size:0.7em" >Observe the change in the string that the driver returned </span></p>
 <br>
 <span style="font-size:0.7em" >Exit, type <font color="yellow">`FS0:/ >`</font> `Reset`</span><br>
 </div>
@@ -573,15 +573,15 @@ Note:
 ---
 @title[Lab 4: Update the Start  ]
 <p align="right"><span class="gold" >Lab 4: Update the `Start()` </span></p>
-<ul style="list-style-type:disc; line-height:0.75;">
-   <li><span style="font-size:0.68em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > the following in  `MyWizardDriver.c` after the <br>
-     <span style="background-color: #101010">@size[.8em](`#include "MyWizardDriver.h"`) </span>line: </span></li>
+<ul style="list-style-type:disc; line-height:0.8;">
+   <li><span style="font-size:0.68em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.68em" > the following in  `MyWizardDriver.c` after the <br>
+     <span style="background-color: #101010">@size[.8em]("`#include "MyWizardDriver.h`") </span>line: </span></li>
 
 ```c++
 #define  DUMMY_SIZE 100*16		// Dummy buffer
 CHAR16	*DummyBufferfromStart = NULL;
 ```
-    <li><span style="font-size:0.68em" ><b>Locate</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > ` MyWizardDriverDriverBindingStart()`,  the start function for this driver and comment out the "`//`" in the line <span style="background-color: #101010">"`return EFI_UNSUPPORTED;` "</span></span></li>
+    <li><span style="font-size:0.68em" ><b>Locate</b>&nbsp;&nbsp;</span><span style="font-size:0.68em" > ` MyWizardDriverDriverBindingStart()`,  the start function for this driver and comment out the "`//`" in the line <br><span style="background-color: #101010">"`return EFI_UNSUPPORTED;` "</span></span></li>
 </ul>
 
 ```c++
@@ -618,7 +618,7 @@ Note:
 
 	return EFI_SUCCESS;
 ```
-<ul style="list-style-type:disc; line-height:0.67;">
+<ul style="list-style-type:disc; line-height:0.7;">
  <li><span style="font-size:0.65em" >Notice the Library calls to `AllocateZeroPool()` and `SetMem16()`</span></li>
  <li><span style="font-size:0.65em" >The `Start()` function is where there would be calls to<br> "`gBS->InstallMultipleProtocolInterfaces()`"</span></li>
 </ul>
@@ -831,7 +831,7 @@ Note:
 <p align="right"><span class="gold" >Lab 5: Update MyWizardDriver.c</span></p>
 <br>
 <span style="font-size:0.8em" ><b>Open</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > "`C:/FW/edk2-ws/edk2/MyWizardDriver/MyWizardDriver.c`"</span><br>
-<p style="line-height:80%"><span style="font-size:0.8em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.65em" > the following  4 lines after the "`#include MyWizardDriver.h`" statement: </span></p>
+<p style="line-height:80%"><span style="font-size:0.68em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.65em" > the following  4 lines after the "`#include MyWizardDriver.h`" statement: </span></p>
 ```C++
 #include "MyWizardDriver.h"
 
@@ -855,7 +855,7 @@ Same as slide
 EFI_STATUS                Status;  // Declare a local variable Status
 
 ```
-<p style="line-height:80%"><span style="font-size:0.8em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.65em" > the 5 lines: 1) new call to "`CreateNVVariable();`" 
+<p style="line-height:70%"><span style="font-size:0.8em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.65em" > the 5 lines: 1) new call to "`CreateNVVariable();`" 
   2-6) `if` statement with DEBUG just befor the linke  "`return EFI_SUCCESS`"  as below: </span></p>
 
 ```C++
@@ -926,7 +926,7 @@ CreateNVVariable()
 // . . .
 #include <Library/UefiRuntimeServicesTableLib.h>
 ```
-<p style="line-height:80%"><span style="font-size:0.8em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.65em" > the following  "#include" after the list of protocol include statements: </span></p>
+<p style="line-height:70%"><span style="font-size:0.8em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.65em" > the following  "#include" after the list of protocol include statements: </span></p>
 ```C++
 // Produced Protocols
 // . . .
@@ -953,7 +953,7 @@ Note:
 <span style="font-size:0.8em" ><b>Load</b> the UEFI Driver </span><br>
 <span style="font-size:0.5em" >&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">`Shell> `</font>`fs0:`</span></span><br>
 <span style="font-size:0.5em" >&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">`FS0:\> `&nbsp;</font>`load MyWizardDriver.efi`</span></span><br><br>
-<span style="font-size:0.7em" >Observe the Buffer address returned by the debug statement in the VS Command window</span></span><br>
+<p style="line-height:70%"><span style="font-size:0.7em" >Observe the Buffer address returned by the debug statement in the VS Command window</span></span></p>
 
 
 Note:
@@ -964,7 +964,7 @@ Note:
 @title[Lab 5 Verify Driver]
 <p align="right"><span class="gold" >Lab 5: Verify Driver</span></p>
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.75em" >Use the Buffer address pointer in the previous slide then use the "`mem`" command <br>
+<p style="line-height:75%" align="left" ><span style="font-size:0.75em" >Use the Buffer address pointer in the previous slide then use the "`mem`" command <br>
 At the Shell prompt, type&nbsp;&nbsp; <span style="background-color: #101010"><font color="yellow">`FS0:\> `&nbsp;</font>`mem 0x0587f010`</span><br>
 Observe the Buffer is filled with the letter "B" or 0x0042 </span></span><br></p>
 <br>
