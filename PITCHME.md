@@ -168,7 +168,7 @@ Note:
 ---
 @title[Lab 2 Build and Test Driver]
 <p align="right"><span class="gold" >Lab 2: Build and Test Driver</span></p>
-<span style="font-size:0.8em" >Open a VS  Command Prompt and type: `cd C:/FW/edk2` then </span>
+<span style="font-size:0.8em" >Open a VS  Command Prompt and type: `cd C:/FW/edk2-ws/edk2` then </span>
 
 ```shell
   C:/FW/edk2-ws/edk2> edksetup
@@ -197,9 +197,10 @@ continue to next slide
 <p align="right"><span class="gold" >Lab 2: Test Driver</span></p>
 <br>
 <span style="font-size:0.8em" >At the shell prompt Type: <span style="background-color: #101010">`drivers`</span></span><br>
-<span style="font-size:0.7em" >Verify the UEFI Shell loaded the new driver. 
-The `drivers` command will display the driver information and a driver handle number ("a9" in the example screenshot )</span>
-
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Verify the UEFI Shell loaded the new driver. 
+The `drivers` command will display the driver information and a driver handle number ("a9" in the example screenshot )
+</span></p>
 
 Note:
 
@@ -214,7 +215,10 @@ Same as slide
 <span style="font-size:0.8em" >At the shell prompt using the handle from the `drivers` command, Type:&nbsp; <span style="background-color: #101010">`dh -d a9`</span></span>
 
 <div class="left">
-<span style="font-size:0.6em" ><i>Note:</i>  The value `a9` is the driver handle for MyWizardDriver.  The handle value may change based on your system configuration.(see example screenshot - right)</span>
+
+<p style="line-height:60%" align="left" ><span style="font-size:0.6em" ><i>Note:</i>  
+The value `a9` is the driver handle for MyWizardDriver.  The handle value may change based on your system configuration.(see example screenshot - right)
+</span></p>
 
 </div>
 <div class="right">
@@ -267,9 +271,9 @@ END of Lab 2
 @title[Lab 3: Component Name ]
 <p align="right"><span class="gold" >Lab 3: Component Name</span></p>
 <br>
-<ul style="list-style-type:disc; line-height:0.7;">
-   <li><span style="font-size:0.78em" ><b>Open</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > `C:/FW/edk2-ws/edk2/MyWizardDriver/ComponentName.c`</span></li>
-   <li><span style="font-size:0.78em" ><b>Change</b>&nbsp;&nbsp; the string returned by the driver from `MyWizardDriver` to: &nbsp;&nbsp;&nbsp; <span style="background-color: #101010"><font color="#a8ff60">`UEFI Sample Driver`</font></span></span></li>
+<ul style="list-style-type:disc; line-height:0.8;">
+   <li><span style="font-size:0.78em" ><b>Open</b>&nbsp;&nbsp;</span><span style="font-size:0.6em" > `C:/FW/edk2-ws/edk2/MyWizardDriver/ComponentName.c`</span></li>
+   <li><span style="font-size:0.78em" ><b>Change</b>&nbsp;&nbsp; the string returned by the driver from `MyWizardDriver` to:<br> &nbsp;&nbsp;&nbsp; <span style="background-color: #101010"><font color="#a8ff60">`UEFI Sample Driver`</font></span></span></li>
 
 ```C++
  /// Table of driver names
@@ -280,7 +284,7 @@ END of Lab 2
    { NULL, NULL }
  };
 ```
-   <li><span style="font-size:0.78em" ><b>Save</b> and close the file: </span><span style="font-size:0.7em" >`C:/FW/edk2-ws/edk2/MyWizardDriver/ComponentName.c`  </span></li>
+   <li><span style="font-size:0.78em" ><b>Save</b> and close the file: </span><span style="font-size:0.67em" ><br>&nbsp;&nbsp;`C:/FW/edk2-ws/edk2/MyWizardDriver/ComponentName.c`  </span></li>
 </ul>
 
 
@@ -291,8 +295,8 @@ END of Lab 2
 <p style="line-height:80%"><span style="font-size:0.8em" > Build the MyWizardDriver </span></p>
 
 ```shell
-  C:/FW/edk2> Build
-  C:/FW/edk2> Build Run
+  C:/FW/edk2-ws/edk2> Build
+  C:/FW/edk2-ws/edk2> Build Run
 ```
 
 <p style="line-height:80%"><span style="font-size:0.7em" >Load the UEFI Driver from the shell
@@ -440,6 +444,7 @@ Stopping a bus controller requires two calls
 ---
 @title[Lab 4: Supported Port]
 <p align="right"><span class="gold" >Lab 4: The `Supported()` Port</span></p>
+<br>
 <p style="line-height:80%"><span style="font-size:0.8em" >The UEFI Driver Wizard produced a `Supported()` function but it only returns `EFI_UNSUPPORTED` </span></p>
 <span style="font-size:0.9em" ><Font color="yellow"><b>Supported Goals: </b></font> </span></li>
 <ul style="list-style-type:disc">
@@ -477,12 +482,12 @@ Note:
 @title[Lab 4: Update Supported ]
 <p align="right"><span class="gold" >Lab 4: Update Supported </span></p>
 <br>
-<ul style="list-style-type:disc; line-height:0.7;">
-   <li><span style="font-size:0.8em" ><b>Open</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > `C:/FW/edk2-ws/edk2/MyWizardDriver/MyWizardDriver.c`</span></li>
-   <li><span style="font-size:0.8em" ><b>Locate</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > ` MyWizardDriverDriverBindingSupported()`, 
-       the supported function for this driver and comment out the "`//`" in the line: <span style="background-color: #101010">"`return EFI_UNSUPPORTED;` "</span> </span></li>
+<ul style="list-style-type:disc; line-height:0.87;">
+   <li><span style="font-size:0.8em" ><b>Open</b>&nbsp;&nbsp;</span><span style="font-size:0.67em" > `C:/FW/edk2-ws/edk2/MyWizardDriver/MyWizardDriver.c`</span></li>
+   <li><span style="font-size:0.8em" ><b>Locate</b>&nbsp;&nbsp;</span><span style="font-size:0.67em" > ` MyWizardDriverDriverBindingSupported()`, 
+       the supported function for this driver and comment out the "`//`" in the line: <br>&nbsp;&nbsp;&nbsp;<span style="background-color: #101010">"`return EFI_UNSUPPORTED;` "</span> </span></li>
 
-```c++
+```C++
 EFI_STATUS
 EFIAPI
 MyWizardDriverDriverBindingSupported (
@@ -543,17 +548,17 @@ This code checks for a specific protocol before returning a status for the suppo
    <li><span style="font-size:0.68em" ><b>Open</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > `C:/FW/edk2/MyWizardDriver/MyWizardDriver.h`</span></li>
    <li><span style="font-size:0.68em" ><b>Notice</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > the following include statement is already added by the driver wizard: </span></li>
 
-```c++
-// Produced Protocols
-//
+```C++
+ // Produced Protocols
+ //
 #include <Protocol/SerialIo.h>
 ```
    <li><span style="font-size:0.8em" ><b>Review</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > the Libraries section and see that UEFI Driver Wizard automatically includes library headers based on the form information. Also other common libary headers were included </span></li>
 </ul>
 
-```c++
-// Libraries
-//
+```C++
+ // Libraries
+ //
 #include <Library/UefiBootServicesTableLib.h>
 #include <Library/MemoryAllocationLib.h>
 #include <Library/BaseMemoryLib.h>
@@ -570,7 +575,8 @@ Note:
 @title[Lab 4: Update the Start  ]
 <p align="right"><span class="gold" >Lab 4: Update the `Start()` </span></p>
 <ul style="list-style-type:disc; line-height:0.7;">
-   <li><span style="font-size:0.68em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > the following in  `MyWizardDriver.c` after the <br><span style="background-color: #101010">`#include “MyWizardDriver.h”` </span>line: </span></li>
+   <li><span style="font-size:0.68em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > the following in  `MyWizardDriver.c` after the <br>
+     <span style="background-color: #101010">@size[.8em](`#include "MyWizardDriver.h"`) </span>line: </span></li>
 
 ```c++
 #define  DUMMY_SIZE 100*16		// Dummy buffer
@@ -633,8 +639,8 @@ Note:
 
 <div class="left1">
 <ul style="list-style-type:none; line-height:0.7;">
-  <li>@fa[book gp-bullet-gold]<span style="font-size:0.68em" >&nbsp;&nbsp;`DEBUG( )`	 include - `[DebugLib.h]`</span></li><br>
-  <li><span style="font-size:0.68em" >`DEBUG()` Macro statements can show status progress interest points throughout  the driver code</span></li>
+  <li>@fa[book gp-bullet-gold]<span style="font-size:0.6em" >&nbsp;&nbsp;`DEBUG( )`	 include - `[DebugLib.h]`</span></li><br>
+  <li><span style="font-size:0.6em" >`DEBUG()` Macro statements can show status progress interest points throughout  the driver code</span></li>
 </ul>
 </div>
 <div class="right1">
@@ -680,7 +686,7 @@ Note:
 @title[Lab 4: Add Debug statements start ]
 <p align="right"><span class="gold" >Lab 4: Add Debug Statements `Start()`</span></p>
 <br>
-<span style="font-size:0.8em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > the following <span style="background-color: #101010">`DEBUG`</span> macro for the Start function just before the <span style="background-color: #101010">`return EFI_SUCCESS;` </span>statement</span></span>
+<span style="font-size:0.8em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > the following <span style="background-color: #101010">`DEBUG`</span> macro for the Start function just before the <span style="background-color: #101010">@size[.8em](` return EFI_SUCCESS; `) </span> statement</span></span>
 ```C++
   DEBUG ((EFI_D_INFO, "\r\n***\r\n[MyWizardDriver] Buffer 0x%p\r\n", DummyBufferfromStart));
   return EFI_SUCCESS;
@@ -698,12 +704,12 @@ Note:
 <br>
 <p style="line-height:80%"><span style="font-size:0.8em" > Build the MyWizardDriver </span></p>
 ```shell
-  C:/FW/edk2> Build
-  C:/FW/edk2> Build Run
+  C:/FW/edk2-ws/edk2> Build
+  C:/FW/edk2-ws/edk2> Build Run
 ```
-<p style="line-height:80%"><span style="font-size:0.7em" >Load the UEFI Driver from the shell
-<br>&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">`Shell> `</font>`fs0:`</span>
-<br>&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">`FS0:\> `&nbsp;</font>`load MyWizardDriver.efi`</span></span></p>
+<p style="line-height:80%"><span style="font-size:0.7em" >Load the UEFI Driver from the shell<br>
+<br>&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">@size[.8em](`Shell> `)</font>@size[.8em](`fs0:`)</span>
+<br>&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">@size[.8em](`FS0:\> )`&nbsp;</font>@size[.8em](`load MyWizardDriver.efi`)</span></span></p>
 
 
 Note: 
@@ -715,8 +721,11 @@ Same as slide
 ---?image=/assets/images/slides/Slide28.JPG
 @title[Lab 4 Build and Test Driver 02]
 <p align="right"><span class="gold" >Lab 4: Build and Test Driver</span></p>
+
+@snap[north-west span-50 ]
 <br>
-<div class="left2">
+<br>
+<br>
 <ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.7em" >Check the VS console output.</span></li>
   <li><span style="font-size:0.7em" >Notice Debug messages indicate the driver did not return EFI_SUCCESS from the "`Supported()`" function <b>most</b> of the time. </span></li>
@@ -726,15 +735,12 @@ Same as slide
 <br>
 <br>
 <span style="font-size:0.7em" >Exit, type <font color="yellow">`FS0:/ >`</font> `Reset`</span><br>
-</div>
-<div class="right2">
-<span style="font-size:0.8em" ></span>
-</div>
-<br>
 
-@snap[south-east span-33]
+
+
+@snap[south-east span-50]
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >Note: use the right-side scroll bar with mouse to scroll back to see the “Supported SUCCESS”
-<br><br><br>&nbsp;
+<br>&nbsp;
 </span></p>
 @snapend
 
@@ -854,7 +860,7 @@ EFI_STATUS                Status;  // Declare a local variable Status
   2-6) `if` statement with DEBUG just befor the linke  "`return EFI_SUCCESS`"  as below: </span></p>
 
 ```C++
-  Status = CreateNVVariable();
+    Status = CreateNVVariable();
 	if (EFI_ERROR(Status)) {
 		DEBUG((EFI_D_ERROR, "[MyWizardDriver] NV Variable already created \r\n"));
 	}
@@ -940,8 +946,8 @@ Note:
 <div class="left">
 
 ```shell
-  C:/FW/edk2> Build
-  C:/FW/edk2> Build Run
+  C:/FW/edk2-ws/edk2> Build
+  C:/FW/edk2-ws/edk2> Build Run
 
 ```
 
@@ -985,7 +991,7 @@ Same as slide
 <p align="right"><span class="gold" >Lab 5: Verify NVRAM Created by Driver</span></p>
 <br>
 <span style="font-size:0.7em" >At the Shell prompt, type &nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">`FS0:\> `</font>`dmpstore -all -b`</span></span><br>
-<div class="left1">
+
 <span style="font-size:0.65em" >Observe new the NVRAM variable "`MWD_NVData`" was created and filled with 0x00s</span></span><br>
 <br>
 <br>
@@ -993,11 +999,10 @@ Same as slide
 <br>
 <br>
 <br>
+<br>
+
 <span style="font-size:0.7em" >Exit, type <font color="yellow">`FS0:/ >`</font> `Reset`</span><br>
-</div>
-<div class="right1">
-<span style="font-size:0.8em" ></span>
-</div>
+
 Note:
 
 End of Lab 5
@@ -1086,8 +1091,8 @@ Note:
 <p style="line-height:80%"><span style="font-size:0.8em" > Build the MyWizardDriver </span></p>
 
 ```shell
-  C:/FW/edk2> Build
-  C:/FW/edk2> Build Run
+  C:/FW/edk2-ws/edk2> Build
+  C:/FW/edk2-ws/edk2> Build Run
 ```
 
 <span style="font-size:0.8em" ><b>Load</b> the UEFI Driver </span><br>
