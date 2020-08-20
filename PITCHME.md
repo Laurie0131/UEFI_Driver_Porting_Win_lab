@@ -212,12 +212,11 @@ Same as slide
 @title[Lab 2 Test Driver -Dh]
 <p align="right"><span class="gold" >Lab 2: Test Driver</span></p>
 <br>
-<span style="font-size:0.8em" >At the shell prompt using the handle from the `drivers` command, Type:&nbsp; <span style="background-color: #101010">`dh -d a9`</span></span>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em" >At the shell prompt using the handle from the `drivers` command, Type:&nbsp; <span style="background-color: #101010">` dh -d a9 `</span></span></p>
 
 <div class="left">
-
-<p style="line-height:60%" align="left" ><span style="font-size:0.6em" ><i>Note:</i>  
-The value `a9` is the driver handle for MyWizardDriver.  The handle value may change based on your system configuration.(see example screenshot - right)
+<br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.6em" ><i>Note:</i>  The value `a9` is the driver handle for MyWizardDriver.  The handle value may change based on your system configuration.(see example screenshot - right)
 </span></p>
 
 </div>
@@ -240,7 +239,7 @@ Same as slide
 
 <div class="left1">
 <span style="font-size:0.7em" >See example screenshot - right</span><br>
-<span style="font-size:0.7em" >Type:&nbsp; <span style="background-color: #101010">`drivers`</span> again</span><br><br>
+<span style="font-size:0.7em" >Type:&nbsp; <span style="background-color: #101010">` drivers `</span> again</span><br><br>
 <span style="font-size:0.7em" >Notice results of `unload` command</span><br><br>
 <span style="font-size:0.7em" >Exit, type <font color="yellow">`FS0:/ >`</font> `Reset`</span><br>
 </div>
@@ -273,7 +272,7 @@ END of Lab 2
 <br>
 <ul style="list-style-type:disc; line-height:0.8;">
    <li><span style="font-size:0.78em" ><b>Open</b>&nbsp;&nbsp;</span><span style="font-size:0.6em" > `C:/FW/edk2-ws/edk2/MyWizardDriver/ComponentName.c`</span></li>
-   <li><span style="font-size:0.78em" ><b>Change</b>&nbsp;&nbsp; the string returned by the driver from `MyWizardDriver` to:<br> &nbsp;&nbsp;&nbsp; <span style="background-color: #101010"><font color="#a8ff60">`UEFI Sample Driver`</font></span></span></li>
+   <li><span style="font-size:0.78em" ><b>Change</b>&nbsp;&nbsp; the string returned by the driver from `MyWizardDriver` to:<br> &nbsp;&nbsp;&nbsp; <span style="background-color: #101010"><font color="#a8ff60">@size[.8em](` UEFI Sample Driver `)</font></span></span></li>
 
 ```C++
  /// Table of driver names
@@ -300,8 +299,8 @@ END of Lab 2
 ```
 
 <p style="line-height:80%"><span style="font-size:0.7em" >Load the UEFI Driver from the shell
-<br>&nbsp;&nbsp;&nbsp; At the Shell prompt, type &nbsp;<span style="background-color: #101010"><font color="yellow">`Shell> `</font>`fs0:`</span>
-<br>&nbsp;&nbsp;&nbsp; Type:&nbsp; <span style="background-color: #101010"><font color="yellow">`FS0:\> `&nbsp;</font>`load MyWizardDriver.efi`</span></span></p>
+<br>&nbsp;&nbsp;&nbsp; At the Shell prompt, type &nbsp;<span style="background-color: #101010"><font color="yellow">` Shell> `</font>` fs0: `</span>
+<br>&nbsp;&nbsp;&nbsp; Type:&nbsp; <span style="background-color: #101010"><font color="yellow">` FS0:\> `&nbsp;</font>`load MyWizardDriver.efi `</span></span></p>
 
 <div class="left">
 <span style="font-size:0.7em" >Type:&nbsp; <span style="background-color: #101010">`drivers`</span></span><br>
@@ -378,7 +377,7 @@ Lab 3 finished
 <br>
 <br>
 <br>
-<br><p style="line-height:85%" align="left"><span style="font-size:01.25em; font-family:Consolas;" >@color[yellow](Supported&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
+<br><p style="line-height:85%" align="left"><span style="font-size:01.1em; font-family:Consolas;" >@color[yellow](Supported&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
 Determines if a driver supports a controller </span></p>
 @snapend
 
@@ -393,7 +392,7 @@ Determines if a driver supports a controller </span></p>
 <br>
 <br>
 <br>
-<br><p style="line-height:85%" align="left"><span style="font-size:01.25em; font-family:Consolas;" >@color[yellow](Start&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
+<br><p style="line-height:85%" align="left"><span style="font-size:01.1em; font-family:Consolas;" >@color[yellow](Start&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
 Starts a driver on a controller &amp; Installs Protocols </span></p>
 @snapend
 
@@ -412,7 +411,7 @@ Starts a driver on a controller &amp; Installs Protocols </span></p>
 <br>
 <br>
 <br>
-<br><p style="line-height:85%" align="left"><span style="font-size:01.25em; font-family:Consolas;" >@color[yellow](Stop&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
+<br><p style="line-height:85%" align="left"><span style="font-size:01.1em; font-family:Consolas;" >@color[yellow](Stop&lpar;&rpar;) </span> <span style="font-size:0.85em;" ><br> 
 Stops a driver from managing a controller </span></p>
 @snapend
 
@@ -574,7 +573,7 @@ Note:
 ---
 @title[Lab 4: Update the Start  ]
 <p align="right"><span class="gold" >Lab 4: Update the `Start()` </span></p>
-<ul style="list-style-type:disc; line-height:0.7;">
+<ul style="list-style-type:disc; line-height:0.75;">
    <li><span style="font-size:0.68em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > the following in  `MyWizardDriver.c` after the <br>
      <span style="background-color: #101010">@size[.8em](`#include "MyWizardDriver.h"`) </span>line: </span></li>
 
@@ -621,7 +620,7 @@ Note:
 ```
 <ul style="list-style-type:disc; line-height:0.67;">
  <li><span style="font-size:0.65em" >Notice the Library calls to `AllocateZeroPool()` and `SetMem16()`</span></li>
- <li><span style="font-size:0.65em" >The `Start()` function is where there would be calls to "`gBS->InstallMultipleProtocolInterfaces()`"</span></li>
+ <li><span style="font-size:0.65em" >The `Start()` function is where there would be calls to<br> "`gBS->InstallMultipleProtocolInterfaces()`"</span></li>
 </ul>
 
 
@@ -708,8 +707,8 @@ Note:
   C:/FW/edk2-ws/edk2> Build Run
 ```
 <p style="line-height:80%"><span style="font-size:0.7em" >Load the UEFI Driver from the shell<br>
-<br>&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">@size[.8em](`Shell> `)</font>@size[.8em](`fs0:`)</span>
-<br>&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">@size[.8em](`FS0:\> )`&nbsp;</font>@size[.8em](`load MyWizardDriver.efi`)</span></span></p>
+<br>&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">@size[.8em](`Shell> `)</font>@size[.8em](` fs0:`)</span>
+<br>&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">@size[.8em](`FS0:\> `)</font>@size[.8em](`load MyWizardDriver.efi`)</span></span></p>
 
 
 Note: 
@@ -722,11 +721,11 @@ Same as slide
 @title[Lab 4 Build and Test Driver 02]
 <p align="right"><span class="gold" >Lab 4: Build and Test Driver</span></p>
 
-@snap[north-west span-50 ]
+@snap[north-west span-60 ]
 <br>
 <br>
 <br>
-<ul style="list-style-type:disc; line-height:0.7;">
+<ul style="list-style-type:disc; line-height:0.75;">
   <li><span style="font-size:0.7em" >Check the VS console output.</span></li>
   <li><span style="font-size:0.7em" >Notice Debug messages indicate the driver did not return EFI_SUCCESS from the "`Supported()`" function <b>most</b> of the time. </span></li>
   <li><span style="font-size:0.7em" >See that the "`Start()`" function did get called and a Buffer was allocated.</span></li>
@@ -738,8 +737,8 @@ Same as slide
 
 
 
-@snap[south-east span-50]
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >Note: use the right-side scroll bar with mouse to scroll back to see the “Supported SUCCESS”
+@snap[south-east span-55]
+<p style="line-height:60%" align="left" ><span style="font-size:0.5em;" >Note: use the right-side scroll bar with mouse to scroll back to see the “Supported SUCCESS”
 <br>&nbsp;
 </span></p>
 @snapend
@@ -832,7 +831,7 @@ Note:
 <p align="right"><span class="gold" >Lab 5: Update MyWizardDriver.c</span></p>
 <br>
 <span style="font-size:0.8em" ><b>Open</b>&nbsp;&nbsp;</span><span style="font-size:0.7em" > "`C:/FW/edk2-ws/edk2/MyWizardDriver/MyWizardDriver.c`"</span><br>
-<p style="line-height:80%"><span style="font-size:0.8em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.65em" > the following  4 lines after the `#include "MyWizardDriver.h"` statement: </span></p>
+<p style="line-height:80%"><span style="font-size:0.8em" ><b>Copy & Paste</b>&nbsp;&nbsp;</span><span style="font-size:0.65em" > the following  4 lines after the "`#include MyWizardDriver.h`" statement: </span></p>
 ```C++
 #include "MyWizardDriver.h"
 
@@ -953,14 +952,9 @@ Note:
 
 <span style="font-size:0.8em" ><b>Load</b> the UEFI Driver </span><br>
 <span style="font-size:0.5em" >&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">`Shell> `</font>`fs0:`</span></span><br>
-<span style="font-size:0.5em" >&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">`FS0:\> `&nbsp;</font>`load MyWizardDriver.efi`</span></span><br>
+<span style="font-size:0.5em" >&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">`FS0:\> `&nbsp;</font>`load MyWizardDriver.efi`</span></span><br><br>
 <span style="font-size:0.7em" >Observe the Buffer address returned by the debug statement in the VS Command window</span></span><br>
-<span style="font-size:0.7em" ></span><br>
 
-</div>
-<div class="right">
-<span style="font-size:0.8em" ></span>
-</div>
 
 Note:
 
@@ -970,9 +964,9 @@ Note:
 @title[Lab 5 Verify Driver]
 <p align="right"><span class="gold" >Lab 5: Verify Driver</span></p>
 <br>
-<span style="font-size:0.75em" >Use the Buffer address pointer in the previous slide then use the "`mem`" command </span><br>
-<span style="font-size:0.75em" >At the Shell prompt, type&nbsp;&nbsp; <span style="background-color: #101010"><font color="yellow">`FS0:\> `&nbsp;</font>`mem 0x0587f010`</span></span><br>
-<span style="font-size:0.75em" >Observe the Buffer is filled with the letter "B" or 0x0042 </span></span><br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em" >Use the Buffer address pointer in the previous slide then use the "`mem`" command <br>
+At the Shell prompt, type&nbsp;&nbsp; <span style="background-color: #101010"><font color="yellow">`FS0:\> `&nbsp;</font>`mem 0x0587f010`</span><br>
+Observe the Buffer is filled with the letter "B" or 0x0042 </span></span><br></p>
 <br>
 <br>
 <br>
@@ -1096,9 +1090,10 @@ Note:
 ```
 
 <span style="font-size:0.8em" ><b>Load</b> the UEFI Driver </span><br>
-<span style="font-size:0.5em" >&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">`Shell> `</font>`fs0:`</span></span><br>
-<span style="font-size:0.5em" >&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">`FS0:\> `&nbsp;</font>`load MyWizardDriver.efi`</span></span><br>
-<span style="font-size:0.7em" >Observe the Buffer address is at `0x0587f010` as this slide example</span><br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.5em" >&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">`Shell> `</font>`fs0:`</span><br>
+&nbsp;&nbsp;&nbsp;<span style="background-color: #101010"><font color="yellow">`FS0:\> `&nbsp;</font>`load MyWizardDriver.efi`</span></span></p>
+<br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em" >Observe the Buffer address is at `0x0587f010` as this slide example</span></p>
 
 </div>
 <div class="right1">
@@ -1163,6 +1158,7 @@ Same as slide
 <br>
 <div class="left1">
 <span style="font-size:0.7em" >Observe the buffer is now NOT filled </span><br>
+<br>
 <br>
 <br>
 <br>
